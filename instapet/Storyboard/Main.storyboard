@@ -342,7 +342,7 @@
         <scene sceneID="43u-Nw-Cwi">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PkC-fJ-taN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Feed" id="m3w-q8-OJy"/>
+                    <tabBarItem key="tabBarItem" title="Feed" image="icons8-home-50" id="m3w-q8-OJy"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y9o-pP-Xhz">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -361,7 +361,7 @@
         <scene sceneID="rfO-Oi-kIQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="X6I-iG-AAO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Upload" id="luz-8B-ttw"/>
+                    <tabBarItem key="tabBarItem" title="Upload" image="icons8-plus-50" id="luz-8B-ttw"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cRa-Em-eaL">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -380,7 +380,7 @@
         <scene sceneID="4PJ-aa-B55">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oCZ-KR-Mft" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Rc1-sp-GQO"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="icons8-contacts-50" id="Rc1-sp-GQO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="z0T-yZ-ThI">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -396,4 +396,9 @@
             <point key="canvasLocation" x="2346" y="-381"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-contacts-50" width="37.5" height="37.5"/>
+        <image name="icons8-home-50" width="37.5" height="37.5"/>
+        <image name="icons8-plus-50" width="37.5" height="37.5"/>
+    </resources>
 </document>
