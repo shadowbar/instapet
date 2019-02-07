@@ -19,7 +19,7 @@ class UserDAO {
         userRef.setValue(object)
     }
     
-    static func getUser(uid: String, complition: @escaping (User?) -> Void){
+    static func getUser(uid: String, complition: @escaping (User) -> Void){
         let ref = Database.database().reference()
         
         ref.child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in

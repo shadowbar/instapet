@@ -28,7 +28,7 @@ class PostViewCell: UITableViewCell {
     
     func setPost(post: Post) {
         UserDAO.getUser(uid: post.author) { (user) in
-            self.authorLabel.text = user?.username
+            self.authorLabel.text = user.username + " - " + user.phonenum
             self.descriptionLabel.text = post.description
             let imageView: UIImageView = self.postImageView
             let placeholderImage = UIImage(named: "placeholder.jpg")
