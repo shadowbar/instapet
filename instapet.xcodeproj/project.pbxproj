@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE03B8F4220CCAC50017B053 /* AuthenticationDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B8F3220CCAC50017B053 /* AuthenticationDAO.swift */; };
+		AE03B8F6220CCAEA0017B053 /* UserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B8F5220CCAEA0017B053 /* UserDAO.swift */; };
+		AE03B8F8220CCAFB0017B053 /* PostDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B8F7220CCAFB0017B053 /* PostDAO.swift */; };
 		AEBAAC08220CC58F002E32BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBAAC07220CC58F002E32BB /* AppDelegate.swift */; };
 		AEBAAC0A220CC58F002E32BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBAAC09220CC58F002E32BB /* ViewController.swift */; };
 		AEBAAC0F220CC591002E32BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEBAAC0E220CC591002E32BB /* Assets.xcassets */; };
@@ -14,9 +17,14 @@
 		AEBAAC1E220CC73B002E32BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEBAAC1D220CC73B002E32BB /* Main.storyboard */; };
 		AEBAAC21220CC84E002E32BB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBAAC20220CC84E002E32BB /* Post.swift */; };
 		AEBAAC23220CC862002E32BB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBAAC22220CC862002E32BB /* User.swift */; };
+		DFCA9C5858A17B389EFE16A5 /* Pods_instapet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F90D7ED7174D575A236227 /* Pods_instapet.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A05F8E617C47F503419924EA /* Pods-instapet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instapet.release.xcconfig"; path = "Pods/Target Support Files/Pods-instapet/Pods-instapet.release.xcconfig"; sourceTree = "<group>"; };
+		AE03B8F3220CCAC50017B053 /* AuthenticationDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDAO.swift; sourceTree = "<group>"; };
+		AE03B8F5220CCAEA0017B053 /* UserDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDAO.swift; sourceTree = "<group>"; };
+		AE03B8F7220CCAFB0017B053 /* PostDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDAO.swift; sourceTree = "<group>"; };
 		AEBAAC04220CC58F002E32BB /* instapet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instapet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEBAAC07220CC58F002E32BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEBAAC09220CC58F002E32BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +34,8 @@
 		AEBAAC1D220CC73B002E32BB /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AEBAAC20220CC84E002E32BB /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		AEBAAC22220CC862002E32BB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BEAC547DD5734449B32922F2 /* Pods-instapet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instapet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-instapet/Pods-instapet.debug.xcconfig"; sourceTree = "<group>"; };
+		F1F90D7ED7174D575A236227 /* Pods_instapet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instapet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,18 +43,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFCA9C5858A17B389EFE16A5 /* Pods_instapet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE03B8F2220CCAA60017B053 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				AE03B8F3220CCAC50017B053 /* AuthenticationDAO.swift */,
+				AE03B8F5220CCAEA0017B053 /* UserDAO.swift */,
+				AE03B8F7220CCAFB0017B053 /* PostDAO.swift */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
 		AEBAABFB220CC58F002E32BB = {
 			isa = PBXGroup;
 			children = (
 				AEBAAC19220CC5B0002E32BB /* .gitignore */,
 				AEBAAC06220CC58F002E32BB /* instapet */,
 				AEBAAC05220CC58F002E32BB /* Products */,
+				CBE175DAAA18C45D3A0DC997 /* Pods */,
+				F729C26AB94FAEDC9A6B6BBD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +82,7 @@
 		AEBAAC06220CC58F002E32BB /* instapet */ = {
 			isa = PBXGroup;
 			children = (
+				AE03B8F2220CCAA60017B053 /* DAO */,
 				AEBAAC1F220CC811002E32BB /* Model */,
 				AEBAAC1C220CC6DA002E32BB /* Storyboard */,
 				AEBAAC1B220CC685002E32BB /* Controller */,
@@ -94,6 +118,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		CBE175DAAA18C45D3A0DC997 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BEAC547DD5734449B32922F2 /* Pods-instapet.debug.xcconfig */,
+				A05F8E617C47F503419924EA /* Pods-instapet.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F729C26AB94FAEDC9A6B6BBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1F90D7ED7174D575A236227 /* Pods_instapet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -101,9 +142,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AEBAAC16220CC591002E32BB /* Build configuration list for PBXNativeTarget "instapet" */;
 			buildPhases = (
+				EEFF4111314564409DA09879 /* [CP] Check Pods Manifest.lock */,
 				AEBAAC00220CC58F002E32BB /* Sources */,
 				AEBAAC01220CC58F002E32BB /* Frameworks */,
 				AEBAAC02220CC58F002E32BB /* Resources */,
+				1A1B86C319C3E97B28B51AC2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,13 +203,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1A1B86C319C3E97B28B51AC2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-instapet/Pods-instapet-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-instapet/Pods-instapet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEFF4111314564409DA09879 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-instapet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AEBAAC00220CC58F002E32BB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AEBAAC23220CC862002E32BB /* User.swift in Sources */,
+				AE03B8F6220CCAEA0017B053 /* UserDAO.swift in Sources */,
 				AEBAAC21220CC84E002E32BB /* Post.swift in Sources */,
+				AE03B8F4220CCAC50017B053 /* AuthenticationDAO.swift in Sources */,
+				AE03B8F8220CCAFB0017B053 /* PostDAO.swift in Sources */,
 				AEBAAC0A220CC58F002E32BB /* ViewController.swift in Sources */,
 				AEBAAC08220CC58F002E32BB /* AppDelegate.swift in Sources */,
 			);
@@ -293,6 +394,7 @@
 		};
 		AEBAAC17220CC591002E32BB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEAC547DD5734449B32922F2 /* Pods-instapet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -312,6 +414,7 @@
 		};
 		AEBAAC18220CC591002E32BB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A05F8E617C47F503419924EA /* Pods-instapet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
