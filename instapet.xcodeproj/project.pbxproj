@@ -10,8 +10,13 @@
 		AE03B8F4220CCAC50017B053 /* AuthenticationDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B8F3220CCAC50017B053 /* AuthenticationDAO.swift */; };
 		AE03B8F6220CCAEA0017B053 /* UserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B8F5220CCAEA0017B053 /* UserDAO.swift */; };
 		AE03B8F8220CCAFB0017B053 /* PostDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B8F7220CCAFB0017B053 /* PostDAO.swift */; };
+		AE03B8FA220CCB940017B053 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B8F9220CCB940017B053 /* LoginViewController.swift */; };
+		AE03B8FC220CCBCB0017B053 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B8FB220CCBCB0017B053 /* RegisterViewController.swift */; };
+		AE03B8FE220CCD1F0017B053 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B8FD220CCD1F0017B053 /* FeedTableViewController.swift */; };
+		AE03B900220CCD4B0017B053 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B8FF220CCD4B0017B053 /* MainTabController.swift */; };
+		AE03B902220CCD840017B053 /* PostViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B901220CCD840017B053 /* PostViewCell.swift */; };
+		AE03B904220CCD9D0017B053 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B903220CCD9D0017B053 /* UploadViewController.swift */; };
 		AEBAAC08220CC58F002E32BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBAAC07220CC58F002E32BB /* AppDelegate.swift */; };
-		AEBAAC0A220CC58F002E32BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBAAC09220CC58F002E32BB /* ViewController.swift */; };
 		AEBAAC0F220CC591002E32BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEBAAC0E220CC591002E32BB /* Assets.xcassets */; };
 		AEBAAC1A220CC5B0002E32BB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = AEBAAC19220CC5B0002E32BB /* .gitignore */; };
 		AEBAAC1E220CC73B002E32BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEBAAC1D220CC73B002E32BB /* Main.storyboard */; };
@@ -25,9 +30,14 @@
 		AE03B8F3220CCAC50017B053 /* AuthenticationDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDAO.swift; sourceTree = "<group>"; };
 		AE03B8F5220CCAEA0017B053 /* UserDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDAO.swift; sourceTree = "<group>"; };
 		AE03B8F7220CCAFB0017B053 /* PostDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDAO.swift; sourceTree = "<group>"; };
+		AE03B8F9220CCB940017B053 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AE03B8FB220CCBCB0017B053 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		AE03B8FD220CCD1F0017B053 /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
+		AE03B8FF220CCD4B0017B053 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		AE03B901220CCD840017B053 /* PostViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewCell.swift; sourceTree = "<group>"; };
+		AE03B903220CCD9D0017B053 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		AEBAAC04220CC58F002E32BB /* instapet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instapet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEBAAC07220CC58F002E32BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AEBAAC09220CC58F002E32BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AEBAAC0E220CC591002E32BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEBAAC13220CC591002E32BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEBAAC19220CC5B0002E32BB /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -96,7 +106,12 @@
 		AEBAAC1B220CC685002E32BB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				AEBAAC09220CC58F002E32BB /* ViewController.swift */,
+				AE03B8F9220CCB940017B053 /* LoginViewController.swift */,
+				AE03B8FB220CCBCB0017B053 /* RegisterViewController.swift */,
+				AE03B8FD220CCD1F0017B053 /* FeedTableViewController.swift */,
+				AE03B8FF220CCD4B0017B053 /* MainTabController.swift */,
+				AE03B901220CCD840017B053 /* PostViewCell.swift */,
+				AE03B903220CCD9D0017B053 /* UploadViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -264,11 +279,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEBAAC23220CC862002E32BB /* User.swift in Sources */,
+				AE03B904220CCD9D0017B053 /* UploadViewController.swift in Sources */,
 				AE03B8F6220CCAEA0017B053 /* UserDAO.swift in Sources */,
+				AE03B900220CCD4B0017B053 /* MainTabController.swift in Sources */,
+				AE03B902220CCD840017B053 /* PostViewCell.swift in Sources */,
 				AEBAAC21220CC84E002E32BB /* Post.swift in Sources */,
+				AE03B8FC220CCBCB0017B053 /* RegisterViewController.swift in Sources */,
+				AE03B8FE220CCD1F0017B053 /* FeedTableViewController.swift in Sources */,
 				AE03B8F4220CCAC50017B053 /* AuthenticationDAO.swift in Sources */,
+				AE03B8FA220CCB940017B053 /* LoginViewController.swift in Sources */,
 				AE03B8F8220CCAFB0017B053 /* PostDAO.swift in Sources */,
-				AEBAAC0A220CC58F002E32BB /* ViewController.swift in Sources */,
 				AEBAAC08220CC58F002E32BB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
