@@ -12,6 +12,8 @@
 		AEBAAC0F220CC591002E32BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEBAAC0E220CC591002E32BB /* Assets.xcassets */; };
 		AEBAAC1A220CC5B0002E32BB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = AEBAAC19220CC5B0002E32BB /* .gitignore */; };
 		AEBAAC1E220CC73B002E32BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEBAAC1D220CC73B002E32BB /* Main.storyboard */; };
+		AEBAAC21220CC84E002E32BB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBAAC20220CC84E002E32BB /* Post.swift */; };
+		AEBAAC23220CC862002E32BB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBAAC22220CC862002E32BB /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		AEBAAC13220CC591002E32BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEBAAC19220CC5B0002E32BB /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		AEBAAC1D220CC73B002E32BB /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		AEBAAC20220CC84E002E32BB /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		AEBAAC22220CC862002E32BB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 		AEBAAC06220CC58F002E32BB /* instapet */ = {
 			isa = PBXGroup;
 			children = (
+				AEBAAC1F220CC811002E32BB /* Model */,
 				AEBAAC1C220CC6DA002E32BB /* Storyboard */,
 				AEBAAC1B220CC685002E32BB /* Controller */,
 				AEBAAC07220CC58F002E32BB /* AppDelegate.swift */,
@@ -78,6 +83,15 @@
 				AEBAAC1D220CC73B002E32BB /* Main.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		AEBAAC1F220CC811002E32BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AEBAAC20220CC84E002E32BB /* Post.swift */,
+				AEBAAC22220CC862002E32BB /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +165,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEBAAC23220CC862002E32BB /* User.swift in Sources */,
+				AEBAAC21220CC84E002E32BB /* Post.swift in Sources */,
 				AEBAAC0A220CC58F002E32BB /* ViewController.swift in Sources */,
 				AEBAAC08220CC58F002E32BB /* AppDelegate.swift in Sources */,
 			);
