@@ -16,7 +16,7 @@ class CameraHandler: NSObject{
     fileprivate var currentVC: UIViewController!
     
     //MARK: Internal Properties
-    var imagePickedBlock: ((UIImage) -> Void)?
+    var imagePickedBlock: ((UIImage?) -> Void)?
     
     func camera() {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
@@ -48,7 +48,9 @@ class CameraHandler: NSObject{
             self.photoLibrary()
         }))
         
-        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (alert:UIAlertAction!) -> Void in
+            self.imagePickedBlock?(nil)
+        }))
         vc.present(actionSheet, animated: true, completion: nil)
     }
 }
@@ -56,6 +58,7 @@ class CameraHandler: NSObject{
 
 extension CameraHandler: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.imagePickedBlock?(nil)
         currentVC.dismiss(animated: true, completion: nil)
     }
     

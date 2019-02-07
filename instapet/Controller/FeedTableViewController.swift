@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
-class FeedTableViewController: UITableViewController {
+class FeedTableViewController: UITableViewController, NVActivityIndicatorViewable {
     var posts: [Post] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.startAnimating(CGSize(width: 20, height: 20), message: "Loading", type: NVActivityIndicatorType.circleStrokeSpin)
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.initPosts()
     }
@@ -21,6 +23,9 @@ class FeedTableViewController: UITableViewController {
         PostDao.getPosts { post in
             self.posts.append(post)
             self.tableView.insertRows(at: [IndexPath(row: self.posts.count-1, section: 0)], with: UITableView.RowAnimation.automatic)
+            if self.isAnimating {
+                self.stopAnimating()
+            }
         }
     }
     

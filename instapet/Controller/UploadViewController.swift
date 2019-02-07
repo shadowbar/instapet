@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
-class UploadViewController: UIViewController {
+class UploadViewController: UIViewController, NVActivityIndicatorViewable {
     
     @IBOutlet weak var uploadImageView: UIImageView!
     @IBOutlet weak var descriptionTextView: UITextView!
@@ -26,9 +27,13 @@ class UploadViewController: UIViewController {
     }
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        self.startAnimating(CGSize(width: 20, height: 20), message: "Choose Image", type: NVActivityIndicatorType.circleStrokeSpin)
         CameraHandler.shared.showActionSheet(vc: self)
         CameraHandler.shared.imagePickedBlock = { (image) in
-            self.uploadImageView.image = image
+            if image != nil {
+                self.uploadImageView.image = image
+            }
+            self.stopAnimating()
         }
     }
     

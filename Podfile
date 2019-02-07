@@ -11,5 +11,5 @@ target 'instapet' do
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
   pod 'FirebaseUI/Storage'
-
+  pod 'NVActivityIndicatorView'
 end
