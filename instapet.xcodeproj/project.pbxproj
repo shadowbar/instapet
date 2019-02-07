@@ -12,6 +12,7 @@
 		AEBAAC0D220CC58F002E32BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEBAAC0B220CC58F002E32BB /* Main.storyboard */; };
 		AEBAAC0F220CC591002E32BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEBAAC0E220CC591002E32BB /* Assets.xcassets */; };
 		AEBAAC12220CC591002E32BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEBAAC10220CC591002E32BB /* LaunchScreen.storyboard */; };
+		AEBAAC1A220CC5B0002E32BB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = AEBAAC19220CC5B0002E32BB /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		AEBAAC0E220CC591002E32BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEBAAC11220CC591002E32BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEBAAC13220CC591002E32BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEBAAC19220CC5B0002E32BB /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 		AEBAABFB220CC58F002E32BB = {
 			isa = PBXGroup;
 			children = (
+				AEBAAC19220CC5B0002E32BB /* .gitignore */,
 				AEBAAC06220CC58F002E32BB /* instapet */,
 				AEBAAC05220CC58F002E32BB /* Products */,
 			);
@@ -54,14 +57,22 @@
 		AEBAAC06220CC58F002E32BB /* instapet */ = {
 			isa = PBXGroup;
 			children = (
+				AEBAAC1B220CC685002E32BB /* Controller */,
 				AEBAAC07220CC58F002E32BB /* AppDelegate.swift */,
-				AEBAAC09220CC58F002E32BB /* ViewController.swift */,
 				AEBAAC0B220CC58F002E32BB /* Main.storyboard */,
 				AEBAAC0E220CC591002E32BB /* Assets.xcassets */,
 				AEBAAC10220CC591002E32BB /* LaunchScreen.storyboard */,
 				AEBAAC13220CC591002E32BB /* Info.plist */,
 			);
 			path = instapet;
+			sourceTree = "<group>";
+		};
+		AEBAAC1B220CC685002E32BB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AEBAAC09220CC58F002E32BB /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +133,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEBAAC1A220CC5B0002E32BB /* .gitignore in Resources */,
 				AEBAAC12220CC591002E32BB /* LaunchScreen.storyboard in Resources */,
 				AEBAAC0F220CC591002E32BB /* Assets.xcassets in Resources */,
 				AEBAAC0D220CC58F002E32BB /* Main.storyboard in Resources */,
@@ -282,8 +294,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UHYR73MC9K;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = instapet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -291,6 +303,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.colman.instapet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -300,8 +313,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UHYR73MC9K;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = instapet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -309,6 +322,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.colman.instapet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
