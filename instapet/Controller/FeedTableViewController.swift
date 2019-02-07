@@ -21,8 +21,8 @@ class FeedTableViewController: UITableViewController, NVActivityIndicatorViewabl
     
     func initPosts() {
         PostDao.getPosts { post in
-            self.posts.append(post)
-            self.tableView.insertRows(at: [IndexPath(row: self.posts.count-1, section: 0)], with: UITableView.RowAnimation.automatic)
+            self.posts.insert(post, at: 0)
+            self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: UITableView.RowAnimation.automatic)
             if self.isAnimating {
                 self.stopAnimating()
             }
