@@ -283,10 +283,9 @@
                                     <constraint firstAttribute="width" secondItem="nUI-gz-sTO" secondAttribute="height" multiplier="16:9" id="gVn-81-XXZ"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Nlx-5R-JOG">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please insert description about the pet." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Nlx-5R-JOG">
                                 <rect key="frame" x="0.0" y="321" width="414" height="462"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

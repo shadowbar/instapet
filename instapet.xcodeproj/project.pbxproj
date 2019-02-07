@@ -16,6 +16,7 @@
 		AE03B900220CCD4B0017B053 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B8FF220CCD4B0017B053 /* MainTabController.swift */; };
 		AE03B902220CCD840017B053 /* PostViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B901220CCD840017B053 /* PostViewCell.swift */; };
 		AE03B904220CCD9D0017B053 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B903220CCD9D0017B053 /* UploadViewController.swift */; };
+		AE03B907220CD2800017B053 /* CameraHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B906220CD2800017B053 /* CameraHandler.swift */; };
 		AEBAAC08220CC58F002E32BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBAAC07220CC58F002E32BB /* AppDelegate.swift */; };
 		AEBAAC0F220CC591002E32BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEBAAC0E220CC591002E32BB /* Assets.xcassets */; };
 		AEBAAC1A220CC5B0002E32BB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = AEBAAC19220CC5B0002E32BB /* .gitignore */; };
@@ -36,6 +37,7 @@
 		AE03B8FF220CCD4B0017B053 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
 		AE03B901220CCD840017B053 /* PostViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewCell.swift; sourceTree = "<group>"; };
 		AE03B903220CCD9D0017B053 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		AE03B906220CD2800017B053 /* CameraHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraHandler.swift; sourceTree = "<group>"; };
 		AEBAAC04220CC58F002E32BB /* instapet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instapet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEBAAC07220CC58F002E32BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEBAAC0E220CC591002E32BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -70,6 +72,14 @@
 			path = DAO;
 			sourceTree = "<group>";
 		};
+		AE03B905220CD2680017B053 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				AE03B906220CD2800017B053 /* CameraHandler.swift */,
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
 		AEBAABFB220CC58F002E32BB = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +102,7 @@
 		AEBAAC06220CC58F002E32BB /* instapet */ = {
 			isa = PBXGroup;
 			children = (
+				AE03B905220CD2680017B053 /* Handler */,
 				AE03B8F2220CCAA60017B053 /* DAO */,
 				AEBAAC1F220CC811002E32BB /* Model */,
 				AEBAAC1C220CC6DA002E32BB /* Storyboard */,
@@ -285,6 +296,7 @@
 				AE03B902220CCD840017B053 /* PostViewCell.swift in Sources */,
 				AEBAAC21220CC84E002E32BB /* Post.swift in Sources */,
 				AE03B8FC220CCBCB0017B053 /* RegisterViewController.swift in Sources */,
+				AE03B907220CD2800017B053 /* CameraHandler.swift in Sources */,
 				AE03B8FE220CCD1F0017B053 /* FeedTableViewController.swift in Sources */,
 				AE03B8F4220CCAC50017B053 /* AuthenticationDAO.swift in Sources */,
 				AE03B8FA220CCB940017B053 /* LoginViewController.swift in Sources */,

@@ -14,24 +14,22 @@ class UploadViewController: UIViewController {
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var uploadButton: UIButton!
     
-    var imagePicker: UIImagePickerController!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.imagePicker = UIImagePickerController()
-        self.imagePicker.allowsEditing = true
-        self.imagePicker.delegate = self
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         self.uploadImageView.isUserInteractionEnabled = true
         self.uploadImageView.addGestureRecognizer(tapGestureRecognizer)
         
-        //        descriptionTextView.delegate = self
+        self.descriptionTextView.textColor = UIColor.lightGray
+        self.descriptionTextView.delegate = self
     }
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
-        present(self.imagePicker, animated: true, completion: nil)
+        CameraHandler.shared.showActionSheet(vc: self)
+        CameraHandler.shared.imagePickedBlock = { (image) in
+            self.uploadImageView.image = image
+        }
     }
     
     @IBAction func uploadTap(_ sender: Any) {
@@ -39,7 +37,7 @@ class UploadViewController: UIViewController {
         guard let image = self.uploadImageView.image else { return }
         PostDao.createPost(author: uid, image: image, description: self.descriptionTextView.text)
         self.tabBarController?.selectedIndex = 0
-        resetUpload()
+        self.resetUpload()
     }
     
     func resetUpload() {
@@ -48,38 +46,18 @@ class UploadViewController: UIViewController {
     }
 }
 
-//extension UploadViewController: UITextViewDelegate {
-//    func textViewDidBeginEditing(_ textView: UITextView) {
-//        if textView.textColor == UIColor.lightGray {
-//            textView.text = nil
-//            textView.textColor = UIColor.black
-//        }
-//    }
-//
-//    func textViewDidEndEditing(_ textView: UITextView) {
-//        if textView.text.isEmpty {
-//            textView.text = "Please insert description about the pet."
-//            textView.textColor = UIColor.lightGray
-//        }
-//    }
-//}
-
-extension UploadViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        var selectedImage: UIImage?
-        
-        if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
-            selectedImage = editedImage
-        } else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            selectedImage = originalImage
+extension UploadViewController: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
         }
-        
-        uploadImageView.image = selectedImage
-        
-        picker.dismiss(animated: true, completion: nil)
     }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true, completion: nil)
+
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "Please insert description about the pet."
+            textView.textColor = UIColor.lightGray
+        }
     }
 }
