@@ -20,7 +20,6 @@ class UploadViewController: UIViewController, NVActivityIndicatorViewable {
         super.viewDidLoad()
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-        self.uploadImageView.isUserInteractionEnabled = true
         self.uploadImageView.addGestureRecognizer(tapGestureRecognizer)
         
         self.descriptionTextView.delegate = self

@@ -36,14 +36,14 @@
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.80000000000000004" height="1"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C5Q-G9-RYJ">
                                 <rect key="frame" x="126" y="291" width="152" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="email"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckr-SJ-gFW">
                                 <rect key="frame" x="151" y="419" width="108" height="46"/>
@@ -136,7 +136,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEb-Nx-FCO">
                                 <rect key="frame" x="61" y="501" width="293" height="51"/>
@@ -243,13 +243,24 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phonenumber" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aya-oO-wmj">
+                                            <rect key="frame" x="286" y="11" width="108" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="6th-zq-TZD"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="EdU-Xr-Zga" firstAttribute="top" secondItem="6fS-ru-kBM" secondAttribute="topMargin" id="2L4-PK-zek"/>
                                         <constraint firstItem="ud7-Ky-idq" firstAttribute="top" secondItem="yDs-J6-bRK" secondAttribute="bottom" id="8xg-h5-D47"/>
                                         <constraint firstItem="ud7-Ky-idq" firstAttribute="leading" secondItem="6fS-ru-kBM" secondAttribute="leadingMargin" id="Hik-BY-AwG"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="EdU-Xr-Zga" secondAttribute="trailing" constant="20" symbolic="YES" id="OsO-z7-Kbu"/>
+                                        <constraint firstItem="Aya-oO-wmj" firstAttribute="top" secondItem="6fS-ru-kBM" secondAttribute="topMargin" id="UsX-zI-hzo"/>
                                         <constraint firstItem="yDs-J6-bRK" firstAttribute="width" secondItem="6fS-ru-kBM" secondAttribute="width" id="ZhM-5h-kSQ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Aya-oO-wmj" secondAttribute="trailing" id="eWK-UT-J6N"/>
                                         <constraint firstItem="yDs-J6-bRK" firstAttribute="top" secondItem="EdU-Xr-Zga" secondAttribute="bottom" id="iaH-S3-7y3"/>
                                         <constraint firstItem="yDs-J6-bRK" firstAttribute="leading" secondItem="6fS-ru-kBM" secondAttribute="leading" id="kNH-ct-cgo"/>
                                         <constraint firstItem="EdU-Xr-Zga" firstAttribute="leading" secondItem="6fS-ru-kBM" secondAttribute="leadingMargin" id="vsv-5L-Ok3"/>
@@ -259,6 +270,7 @@
                                 <connections>
                                     <outlet property="authorLabel" destination="EdU-Xr-Zga" id="TWa-Xg-rEL"/>
                                     <outlet property="descriptionLabel" destination="ud7-Ky-idq" id="9YF-8h-dyl"/>
+                                    <outlet property="phoneLabel" destination="Aya-oO-wmj" id="5Ta-xP-gPk"/>
                                     <outlet property="postImageView" destination="yDs-J6-bRK" id="knS-x8-Ol5"/>
                                 </connections>
                             </tableViewCell>
@@ -291,7 +303,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nUI-gz-sTO">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nUI-gz-sTO">
                                 <rect key="frame" x="0.0" y="88" width="414" height="233"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nUI-gz-sTO" secondAttribute="height" multiplier="16:9" id="gVn-81-XXZ"/>
