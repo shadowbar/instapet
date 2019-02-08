@@ -10,6 +10,9 @@ import UIKit
 
 class ProfileViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var numberOfPostsLabel: UILabel!
     
     var posts: [Post] = []
     
@@ -24,12 +27,22 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         
+        self.initUserData()
         self.initPosts()
+    }
+    
+    func initUserData() {
+        guard let uid = AuthenticationDAO.getUserId() else { return }
+        UserDAO.getUser(uid: uid) { (user) in
+            self.usernameLabel.text = user.username
+            self.phoneLabel.text = user.phonenum
+        }
     }
     
     func initPosts() {
         PostDao.getUserPosts { post in
             self.posts.insert(post, at: 0)
+            self.numberOfPostsLabel.text = String(self.posts.count)
             self.collectionView!.insertItems(at: [IndexPath(item: 0, section: 0)])
         }
     }

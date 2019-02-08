@@ -351,10 +351,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Vf4-qD-jBN">
-                                <rect key="frame" x="0.0" y="88" width="414" height="233"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="Vf4-qD-jBN">
+                                <rect key="frame" x="25" y="113" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="nGv-cq-8tI"/>
+                                    <constraint firstAttribute="width" secondItem="Vf4-qD-jBN" secondAttribute="height" multiplier="1:1" id="oha-d6-he6"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="75"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8X-Ad-6Ux">
+                                <rect key="frame" x="207" y="160" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phonenumber" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0d-0K-VtO">
+                                <rect key="frame" x="207" y="194" width="108" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of Posts: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tq5-u6-E1n">
+                                <rect key="frame" x="20" y="292" width="138" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zin-4j-VQT">
+                                <rect key="frame" x="166" y="292" width="11" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AVF-8l-Xfy">
                                 <rect key="frame" x="0.0" y="321" width="414" height="492"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -409,6 +446,11 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Vf4-qD-jBN" firstAttribute="leading" secondItem="S79-fy-kx6" secondAttribute="leading" constant="25" id="LKp-Bm-xWs"/>
+                            <constraint firstItem="Vf4-qD-jBN" firstAttribute="leading" secondItem="S79-fy-kx6" secondAttribute="leading" constant="25" id="Vgv-qr-kzQ"/>
+                            <constraint firstItem="Vf4-qD-jBN" firstAttribute="top" secondItem="S79-fy-kx6" secondAttribute="top" constant="25" id="td1-p5-xTw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="S79-fy-kx6"/>
                     </view>
                     <navigationItem key="navigationItem" title="InstaPet" id="CRr-NL-Ame">
@@ -420,6 +462,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="AVF-8l-Xfy" id="sCV-Q8-QFH"/>
+                        <outlet property="numberOfPostsLabel" destination="zin-4j-VQT" id="SQR-vh-P46"/>
+                        <outlet property="phoneLabel" destination="Y0d-0K-VtO" id="dj7-3i-CWz"/>
+                        <outlet property="usernameLabel" destination="m8X-Ad-6Ux" id="RWy-eL-Rot"/>
                     </connections>
                 </viewController>
             </objects>
@@ -463,12 +508,12 @@
             </objects>
             <point key="canvasLocation" x="3319" y="-381"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="4PJ-aa-B55">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bjL-yl-HYn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oCZ-KR-Mft" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="icons8-contacts-50" id="Rc1-sp-GQO"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="icons8-contacts-50" id="Rc1-sp-GQO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="z0T-yZ-ThI">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -487,6 +532,6 @@
         <image name="icons8-contacts-50" width="37.5" height="37.5"/>
         <image name="icons8-home-50" width="37.5" height="37.5"/>
         <image name="icons8-plus-50" width="37.5" height="37.5"/>
-        <image name="placeholder" width="1200" height="800"/>
+        <image name="profile" width="700" height="701"/>
     </resources>
 </document>
