@@ -14,8 +14,11 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwordInput: UITextField!
     @IBOutlet weak var phoneInput: UITextField!
     
+    var gradientLayer: CAGradientLayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.createGradient()
     }
     
     @IBAction func createTapped(_ sender: Any) {
@@ -44,5 +47,11 @@ class RegisterViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    func createGradient() {
+        let gradientLayer = GradientHandler.shared.get(top: 0xE55D87, bottom: 0x5FC3E4)
+        gradientLayer.frame = self.view.bounds
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
     }
 }

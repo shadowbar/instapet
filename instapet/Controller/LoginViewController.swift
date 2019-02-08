@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.createGradient()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -47,5 +47,11 @@ class LoginViewController: UIViewController {
                 self.present(alert, animated: true, completion: nil)
             }
         })
+    }
+    
+    func createGradient() {
+        let gradientLayer = GradientHandler.shared.get(top: 0xE55D87, bottom: 0x5FC3E4)
+        gradientLayer.frame = self.view.bounds
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
     }
 }

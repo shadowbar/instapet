@@ -19,6 +19,8 @@
 		AE03B907220CD2800017B053 /* CameraHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B906220CD2800017B053 /* CameraHandler.swift */; };
 		AE03B90B220CDBD70017B053 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = AE03B90A220CDBD70017B053 /* Podfile */; };
 		AE03B910220D786C0017B053 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AE03B90F220D786C0017B053 /* README.md */; };
+		AE03B912220D93020017B053 /* GradientHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B911220D93020017B053 /* GradientHandler.swift */; };
+		AE03B916220D93A60017B053 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B915220D93A60017B053 /* UIColor+Extensions.swift */; };
 		AEBAAC08220CC58F002E32BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBAAC07220CC58F002E32BB /* AppDelegate.swift */; };
 		AEBAAC0F220CC591002E32BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEBAAC0E220CC591002E32BB /* Assets.xcassets */; };
 		AEBAAC1A220CC5B0002E32BB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = AEBAAC19220CC5B0002E32BB /* .gitignore */; };
@@ -42,6 +44,8 @@
 		AE03B906220CD2800017B053 /* CameraHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraHandler.swift; sourceTree = "<group>"; };
 		AE03B90A220CDBD70017B053 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		AE03B90F220D786C0017B053 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		AE03B911220D93020017B053 /* GradientHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientHandler.swift; sourceTree = "<group>"; };
+		AE03B915220D93A60017B053 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		AEBAAC04220CC58F002E32BB /* instapet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instapet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEBAAC07220CC58F002E32BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEBAAC0E220CC591002E32BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,8 +84,17 @@
 			isa = PBXGroup;
 			children = (
 				AE03B906220CD2800017B053 /* CameraHandler.swift */,
+				AE03B911220D93020017B053 /* GradientHandler.swift */,
 			);
 			path = Handler;
+			sourceTree = "<group>";
+		};
+		AE03B913220D93790017B053 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				AE03B915220D93A60017B053 /* UIColor+Extensions.swift */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 		AEBAABFB220CC58F002E32BB = {
@@ -107,6 +120,7 @@
 		AEBAAC06220CC58F002E32BB /* instapet */ = {
 			isa = PBXGroup;
 			children = (
+				AE03B913220D93790017B053 /* Extentions */,
 				AE03B905220CD2680017B053 /* Handler */,
 				AE03B8F2220CCAA60017B053 /* DAO */,
 				AEBAAC1F220CC811002E32BB /* Model */,
@@ -302,11 +316,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEBAAC23220CC862002E32BB /* User.swift in Sources */,
+				AE03B916220D93A60017B053 /* UIColor+Extensions.swift in Sources */,
 				AE03B904220CCD9D0017B053 /* UploadViewController.swift in Sources */,
 				AE03B8F6220CCAEA0017B053 /* UserDAO.swift in Sources */,
 				AE03B900220CCD4B0017B053 /* MainTabController.swift in Sources */,
 				AE03B902220CCD840017B053 /* PostViewCell.swift in Sources */,
 				AEBAAC21220CC84E002E32BB /* Post.swift in Sources */,
+				AE03B912220D93020017B053 /* GradientHandler.swift in Sources */,
 				AE03B8FC220CCBCB0017B053 /* RegisterViewController.swift in Sources */,
 				AE03B907220CD2800017B053 /* CameraHandler.swift in Sources */,
 				AE03B8FE220CCD1F0017B053 /* FeedTableViewController.swift in Sources */,

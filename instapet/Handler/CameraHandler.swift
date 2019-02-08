@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 class CameraHandler: NSObject{
     static let shared = CameraHandler()
     
