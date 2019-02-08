@@ -30,9 +30,17 @@ class PostViewCell: UITableViewCell {
         UserDAO.getUser(uid: post.author) { (user) in
             self.authorLabel.text = user.username + " - " + user.phonenum
             self.descriptionLabel.text = post.description
-            let imageView: UIImageView = self.postImageView
-            let placeholderImage = UIImage(named: "placeholder.jpg")
-            imageView.sd_setImage(with: URL(string: post.image), placeholderImage: placeholderImage)
+            if let cachedImage = PostDao.imageCache.object(forKey: post.image as NSString) {
+                self.postImageView.image = cachedImage
+            } else {
+                self.postImageView.sd_setImage(with: URL(string: post.image), completed: { (image, error, cacheType, url) in
+                    if image != nil {
+                        PostDao.imageCache.setObject(image!, forKey: post.image as NSString)
+                    } else if error != nil {
+                        print(error!)
+                    }
+                })
+            }
         }
     }
 }

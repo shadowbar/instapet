@@ -11,6 +11,8 @@ import Firebase
 import UIKit
 
 class PostDao {
+    static let imageCache = NSCache<NSString, UIImage>()
+
     static func createPost(author: String, image: UIImage, description: String) {
         let ref = Database.database().reference()
         guard let pid = ref.child("posts").childByAutoId().key else { return }
