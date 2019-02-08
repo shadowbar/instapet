@@ -42,9 +42,16 @@ class UploadViewController: UIViewController, NVActivityIndicatorViewable {
     @IBAction func uploadTap(_ sender: Any) {
         guard let uid = AuthenticationDAO.getUserId() else { return }
         guard let image = self.uploadImageView.image else { return }
-        PostDao.createPost(author: uid, image: image, description: self.descriptionTextView.text)
-        self.tabBarController?.selectedIndex = 0
-        self.resetUpload()
+        if image != UIImage(named: "placeholder") && self.descriptionTextView.text != "" &&
+            self.descriptionTextView.text != "Please insert description about the pet." {
+            PostDao.createPost(author: uid, image: image, description: self.descriptionTextView.text)
+            self.tabBarController?.selectedIndex = 0
+            self.resetUpload()
+        } else {
+            let alert = UIAlertController(title: "Error", message: "Please choose image and text", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     @IBAction func logoutTap(_ sender: Any) {

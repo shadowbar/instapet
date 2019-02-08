@@ -43,7 +43,7 @@ class FeedTableViewController: UITableViewController, NVActivityIndicatorViewabl
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let post = posts[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PostViewCell") as! PostViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FeedViewCell", for: indexPath) as! FeedViewCell
         cell.setPost(post: post)
         return cell
     }

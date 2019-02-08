@@ -14,13 +14,16 @@
 		AE03B8FC220CCBCB0017B053 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B8FB220CCBCB0017B053 /* RegisterViewController.swift */; };
 		AE03B8FE220CCD1F0017B053 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B8FD220CCD1F0017B053 /* FeedTableViewController.swift */; };
 		AE03B900220CCD4B0017B053 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B8FF220CCD4B0017B053 /* MainTabController.swift */; };
-		AE03B902220CCD840017B053 /* PostViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B901220CCD840017B053 /* PostViewCell.swift */; };
+		AE03B902220CCD840017B053 /* FeedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B901220CCD840017B053 /* FeedViewCell.swift */; };
 		AE03B904220CCD9D0017B053 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B903220CCD9D0017B053 /* UploadViewController.swift */; };
 		AE03B907220CD2800017B053 /* CameraHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B906220CD2800017B053 /* CameraHandler.swift */; };
 		AE03B90B220CDBD70017B053 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = AE03B90A220CDBD70017B053 /* Podfile */; };
 		AE03B910220D786C0017B053 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AE03B90F220D786C0017B053 /* README.md */; };
 		AE03B912220D93020017B053 /* GradientHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B911220D93020017B053 /* GradientHandler.swift */; };
 		AE03B916220D93A60017B053 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B915220D93A60017B053 /* UIColor+Extensions.swift */; };
+		AE03B918220D9B690017B053 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B917220D9B690017B053 /* ProfileViewController.swift */; };
+		AE03B91A220D9C4D0017B053 /* ProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B919220D9C4D0017B053 /* ProfileViewCell.swift */; };
+		AE03B91C220DA8DD0017B053 /* ProfileCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B91B220DA8DD0017B053 /* ProfileCollectionViewController.swift */; };
 		AEBAAC08220CC58F002E32BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBAAC07220CC58F002E32BB /* AppDelegate.swift */; };
 		AEBAAC0F220CC591002E32BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEBAAC0E220CC591002E32BB /* Assets.xcassets */; };
 		AEBAAC1A220CC5B0002E32BB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = AEBAAC19220CC5B0002E32BB /* .gitignore */; };
@@ -39,13 +42,16 @@
 		AE03B8FB220CCBCB0017B053 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		AE03B8FD220CCD1F0017B053 /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 		AE03B8FF220CCD4B0017B053 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
-		AE03B901220CCD840017B053 /* PostViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewCell.swift; sourceTree = "<group>"; };
+		AE03B901220CCD840017B053 /* FeedViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewCell.swift; sourceTree = "<group>"; };
 		AE03B903220CCD9D0017B053 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		AE03B906220CD2800017B053 /* CameraHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraHandler.swift; sourceTree = "<group>"; };
 		AE03B90A220CDBD70017B053 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		AE03B90F220D786C0017B053 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AE03B911220D93020017B053 /* GradientHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientHandler.swift; sourceTree = "<group>"; };
 		AE03B915220D93A60017B053 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		AE03B917220D9B690017B053 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		AE03B919220D9C4D0017B053 /* ProfileViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewCell.swift; sourceTree = "<group>"; };
+		AE03B91B220DA8DD0017B053 /* ProfileCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewController.swift; sourceTree = "<group>"; };
 		AEBAAC04220CC58F002E32BB /* instapet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instapet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEBAAC07220CC58F002E32BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEBAAC0E220CC591002E32BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -141,8 +147,11 @@
 				AE03B8FB220CCBCB0017B053 /* RegisterViewController.swift */,
 				AE03B8FD220CCD1F0017B053 /* FeedTableViewController.swift */,
 				AE03B8FF220CCD4B0017B053 /* MainTabController.swift */,
-				AE03B901220CCD840017B053 /* PostViewCell.swift */,
+				AE03B901220CCD840017B053 /* FeedViewCell.swift */,
 				AE03B903220CCD9D0017B053 /* UploadViewController.swift */,
+				AE03B917220D9B690017B053 /* ProfileViewController.swift */,
+				AE03B919220D9C4D0017B053 /* ProfileViewCell.swift */,
+				AE03B91B220DA8DD0017B053 /* ProfileCollectionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -320,13 +329,16 @@
 				AE03B904220CCD9D0017B053 /* UploadViewController.swift in Sources */,
 				AE03B8F6220CCAEA0017B053 /* UserDAO.swift in Sources */,
 				AE03B900220CCD4B0017B053 /* MainTabController.swift in Sources */,
-				AE03B902220CCD840017B053 /* PostViewCell.swift in Sources */,
+				AE03B902220CCD840017B053 /* FeedViewCell.swift in Sources */,
 				AEBAAC21220CC84E002E32BB /* Post.swift in Sources */,
 				AE03B912220D93020017B053 /* GradientHandler.swift in Sources */,
 				AE03B8FC220CCBCB0017B053 /* RegisterViewController.swift in Sources */,
+				AE03B91A220D9C4D0017B053 /* ProfileViewCell.swift in Sources */,
+				AE03B91C220DA8DD0017B053 /* ProfileCollectionViewController.swift in Sources */,
 				AE03B907220CD2800017B053 /* CameraHandler.swift in Sources */,
 				AE03B8FE220CCD1F0017B053 /* FeedTableViewController.swift in Sources */,
 				AE03B8F4220CCAC50017B053 /* AuthenticationDAO.swift in Sources */,
+				AE03B918220D9B690017B053 /* ProfileViewController.swift in Sources */,
 				AE03B8FA220CCB940017B053 /* LoginViewController.swift in Sources */,
 				AE03B8F8220CCAFB0017B053 /* PostDAO.swift in Sources */,
 				AEBAAC08220CC58F002E32BB /* AppDelegate.swift in Sources */,

@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-class PostViewCell: UITableViewCell {
+class FeedViewCell: UITableViewCell {
     
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var postImageView: UIImageView!

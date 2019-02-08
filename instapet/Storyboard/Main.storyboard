@@ -215,7 +215,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostViewCell" rowHeight="350" id="l4K-0P-GJy" customClass="PostViewCell" customModule="instapet" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedViewCell" rowHeight="350" id="l4K-0P-GJy" customClass="FeedViewCell" customModule="instapet" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="350"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="l4K-0P-GJy" id="6fS-ru-kBM">
@@ -345,20 +345,85 @@
         <!--Profile-->
         <scene sceneID="2hS-JF-rHf">
             <objects>
-                <viewController title="Profile" id="oEI-9x-9Gf" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YI1-40-mqZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="Profile" id="oEI-9x-9Gf" customClass="ProfileViewController" customModule="instapet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LiF-as-Crm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Vf4-qD-jBN">
+                                <rect key="frame" x="0.0" y="88" width="414" height="233"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AVF-8l-Xfy">
+                                <rect key="frame" x="0.0" y="321" width="414" height="492"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="c9m-c6-bYp">
+                                    <size key="itemSize" width="130" height="130"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProfileViewCell" id="ifA-bx-Af6" customClass="ProfileViewCell" customModule="instapet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pfU-7Z-mWl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="73"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="pfU-7Z-mWl" secondAttribute="height" multiplier="16:9" id="duD-cG-inl"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bKY-6k-X0v">
+                                                    <rect key="frame" x="0.0" y="73" width="130" height="57"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="bKY-6k-X0v" secondAttribute="bottom" id="1ac-3v-xut"/>
+                                            <constraint firstItem="pfU-7Z-mWl" firstAttribute="leading" secondItem="ifA-bx-Af6" secondAttribute="leading" id="2OF-qr-kwF"/>
+                                            <constraint firstItem="bKY-6k-X0v" firstAttribute="top" secondItem="pfU-7Z-mWl" secondAttribute="bottom" id="RbS-oa-Rnj"/>
+                                            <constraint firstItem="bKY-6k-X0v" firstAttribute="leading" secondItem="ifA-bx-Af6" secondAttribute="leading" id="Wxw-cZ-s6R"/>
+                                            <constraint firstItem="bKY-6k-X0v" firstAttribute="width" secondItem="ifA-bx-Af6" secondAttribute="width" id="XYa-J0-c9C"/>
+                                            <constraint firstItem="pfU-7Z-mWl" firstAttribute="width" secondItem="ifA-bx-Af6" secondAttribute="width" id="tbh-3y-sJa"/>
+                                            <constraint firstItem="pfU-7Z-mWl" firstAttribute="top" secondItem="ifA-bx-Af6" secondAttribute="top" id="wIw-cX-Rs7"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="bKY-6k-X0v" id="bf3-Nn-hNE"/>
+                                            <outlet property="postImage" destination="pfU-7Z-mWl" id="Kme-Ya-gtg"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="oEI-9x-9Gf" id="L1v-jx-3Tt"/>
+                                    <outlet property="delegate" destination="oEI-9x-9Gf" id="lpA-fN-ufo"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="S79-fy-kx6"/>
                     </view>
                     <navigationItem key="navigationItem" title="InstaPet" id="CRr-NL-Ame">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="3N9-X0-jxE"/>
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="3N9-X0-jxE">
+                            <connections>
+                                <action selector="logoutTap:" destination="oEI-9x-9Gf" id="XAs-xV-Ctw"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="AVF-8l-Xfy" id="sCV-Q8-QFH"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YI1-40-mqZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2345" y="378"/>
+            <point key="canvasLocation" x="2344.9275362318845" y="377.67857142857139"/>
         </scene>
         <!--Feed-->
         <scene sceneID="43u-Nw-Cwi">
@@ -401,6 +466,7 @@
         <!--Item-->
         <scene sceneID="4PJ-aa-B55">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bjL-yl-HYn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oCZ-KR-Mft" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" image="icons8-contacts-50" id="Rc1-sp-GQO"/>
                     <toolbarItems/>
@@ -413,7 +479,6 @@
                         <segue destination="oEI-9x-9Gf" kind="relationship" relationship="rootViewController" id="o28-Xt-qw6"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bjL-yl-HYn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2346" y="-381"/>
         </scene>
@@ -422,5 +487,6 @@
         <image name="icons8-contacts-50" width="37.5" height="37.5"/>
         <image name="icons8-home-50" width="37.5" height="37.5"/>
         <image name="icons8-plus-50" width="37.5" height="37.5"/>
+        <image name="placeholder" width="1200" height="800"/>
     </resources>
 </document>
