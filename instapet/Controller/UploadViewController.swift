@@ -26,24 +26,6 @@ class UploadViewController: UIViewController, NVActivityIndicatorViewable {
         self.descriptionTextView.delegate = self
         
         self.resetUpload()
-        self.displayPhoto()
-    }
-    
-    func displayPhoto() {
-        PHPhotoLibrary.requestAuthorization { status in
-            switch status {
-            case .authorized:
-                let fetchOptions = PHFetchOptions()
-                let allPhotos = PHAsset.fetchAssets(with: .image, options: fetchOptions)
-                let asset = allPhotos.object(at: 0)
-                self.uploadImageView.fetchImage(asset: asset, contentMode: .aspectFill, targetSize: self.uploadImageView.frame.size)
-            case .denied, .restricted:
-                print("Not allowed")
-            case .notDetermined:
-                // Should not see this when requesting
-                print("Not determined yet")
-            }
-        }
     }
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
@@ -65,8 +47,14 @@ class UploadViewController: UIViewController, NVActivityIndicatorViewable {
         self.resetUpload()
     }
     
+    @IBAction func logoutTap(_ sender: Any) {
+        AuthenticationDAO.signout()
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC")
+        self.present(vc!, animated: true, completion: nil)
+    }
+
     func resetUpload() {
-        self.uploadImageView.image = nil
+        self.uploadImageView.image = UIImage(named: "placeholder")
         self.descriptionTextView.text = "Please insert description about the pet."
         self.descriptionTextView.textColor = UIColor.lightGray
     }
@@ -84,23 +72,6 @@ extension UploadViewController: UITextViewDelegate {
         if textView.text.isEmpty {
             textView.text = "Please insert description about the pet."
             textView.textColor = UIColor.lightGray
-        }
-    }
-}
-
-extension UIImageView {
-    func fetchImage(asset: PHAsset, contentMode: PHImageContentMode, targetSize: CGSize) {
-        let options = PHImageRequestOptions()
-        options.version = .original
-        PHImageManager.default().requestImage(for: asset, targetSize: targetSize, contentMode: contentMode, options: options) { image, _ in
-            guard let image = image else { return }
-            switch contentMode {
-            case .aspectFill:
-                self.contentMode = .scaleAspectFill
-            case .aspectFit:
-                self.contentMode = .scaleAspectFit
-            }
-            self.image = image
         }
     }
 }

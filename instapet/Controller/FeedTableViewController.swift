@@ -48,6 +48,11 @@ class FeedTableViewController: UITableViewController, NVActivityIndicatorViewabl
         return cell
     }
     
+    @IBAction func logoutTap(_ sender: Any) {
+        AuthenticationDAO.signout()
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC")
+        self.present(vc!, animated: true, completion: nil)
+    }
     /*
      // Override to support conditional editing of the table view.
      override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

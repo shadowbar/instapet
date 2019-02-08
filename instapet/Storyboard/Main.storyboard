@@ -18,7 +18,7 @@
         <!--Login View Controller-->
         <scene sceneID="4SE-Ll-N6m">
             <objects>
-                <viewController id="NW3-3j-5SW" customClass="LoginViewController" customModule="instapet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NW3-3j-5SW" customClass="LoginViewController" customModule="instapet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ali-dq-uZI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,6 +156,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="titleLabel.adjustsFontSizeToFitWidth" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="NW3-3j-5SW" kind="show" id="Cnf-V6-HXD"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TzX-EN-Jju">
                                 <rect key="frame" x="112" y="394" width="190" height="30"/>
@@ -202,7 +205,7 @@
         <scene sceneID="QLs-tK-Dw1">
             <objects>
                 <tableViewController title="Feed" id="Dyp-1t-0XU" customClass="FeedTableViewController" customModule="instapet" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="350" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1FM-c9-Czx">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="350" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1FM-c9-Czx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -260,7 +263,13 @@
                             <outlet property="delegate" destination="Dyp-1t-0XU" id="L0f-Rf-TLM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="0kB-Q4-rVd"/>
+                    <navigationItem key="navigationItem" title="InstaPet" id="0kB-Q4-rVd">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="C7n-44-EXb">
+                            <connections>
+                                <action selector="logoutTap:" destination="Dyp-1t-0XU" id="D6Q-St-r7y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="1FM-c9-Czx" id="a39-AP-I27"/>
                     </connections>
@@ -269,10 +278,10 @@
             </objects>
             <point key="canvasLocation" x="4269.5652173913049" y="377.67857142857139"/>
         </scene>
-        <!--Upload View Controller-->
+        <!--Upload-->
         <scene sceneID="pPD-cu-hVb">
             <objects>
-                <viewController id="lxN-Wo-HaD" customClass="UploadViewController" customModule="instapet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Upload" id="lxN-Wo-HaD" customClass="UploadViewController" customModule="instapet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OWf-hl-8PS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -311,7 +320,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="R5Y-pi-PhJ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="7W8-qI-bx3"/>
+                    <navigationItem key="navigationItem" title="InstaPet" id="7W8-qI-bx3">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="rbQ-OC-lnD">
+                            <connections>
+                                <action selector="logoutTap:" destination="lxN-Wo-HaD" id="M46-Ic-8zI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="descriptionTextView" destination="Nlx-5R-JOG" id="e8q-Ed-iX1"/>
                         <outlet property="uploadButton" destination="qUd-3K-2ZU" id="3mC-9T-5L4"/>
@@ -322,17 +337,19 @@
             </objects>
             <point key="canvasLocation" x="3319" y="378"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile-->
         <scene sceneID="2hS-JF-rHf">
             <objects>
-                <viewController id="oEI-9x-9Gf" sceneMemberID="viewController">
+                <viewController title="Profile" id="oEI-9x-9Gf" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LiF-as-Crm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="S79-fy-kx6"/>
                     </view>
-                    <navigationItem key="navigationItem" id="CRr-NL-Ame"/>
+                    <navigationItem key="navigationItem" title="InstaPet" id="CRr-NL-Ame">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="3N9-X0-jxE"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YI1-40-mqZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

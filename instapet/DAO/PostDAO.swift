@@ -11,11 +11,13 @@ import Firebase
 import UIKit
 
 class PostDao {
+    static let postsRef = Database.database().reference().child("posts")
+    static let storageRef = Storage.storage().reference()
+    
     static let imageCache = NSCache<NSString, UIImage>()
 
     static func createPost(author: String, image: UIImage, description: String) {
-        let ref = Database.database().reference()
-        guard let pid = ref.child("posts").childByAutoId().key else { return }
+        guard let pid = postsRef.childByAutoId().key else { return }
         
         uploadPostImage(pid: pid, image: image) { url in
             if url != nil {
@@ -25,7 +27,7 @@ class PostDao {
                     "description": description,
                     "upload": Date().timeIntervalSince1970
                     ] as [String : Any]
-                ref.child("posts").child(pid).setValue(post)
+                postsRef.child(pid).setValue(post)
             }
         }
     }
@@ -46,8 +48,7 @@ class PostDao {
     //    }
     
     static func getPosts(complition: @escaping (Post) -> Void) {
-        let postsRef = Database.database().reference().child("posts").queryOrdered(byChild: "upload")
-        postsRef.observe(.childAdded, with: { (snapshot)in
+        postsRef.queryOrdered(byChild: "upload").observe(.childAdded, with: { (snapshot) in
             let post = snapshot.value as? NSDictionary
             let pid = post?["pid"] as? String ?? ""
             let author = post?["author"] as? String ?? ""
@@ -59,15 +60,13 @@ class PostDao {
     }
     
     private static func uploadPostImage(pid:String, image:UIImage, complition: @escaping (String?) -> Void) {
-        let storageRef = Storage.storage().reference().child("post/\(pid)")
-        
         guard let imageData = image.jpegData(compressionQuality: 0.75) else { return }
         
         let metaData = StorageMetadata()
         metaData.contentType = "image/jpg"
         
         // Upload the file to the path "images/rivers.jpg"
-        storageRef.putData(imageData, metadata: metaData) { (metadata, error) in
+        storageRef.child("post/\(pid)").putData(imageData, metadata: metaData) { (metadata, error) in
             // You can also access to download URL after upload.
             storageRef.downloadURL { (url, error) in
                 if let downloadURL = url {

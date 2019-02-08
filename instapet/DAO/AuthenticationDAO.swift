@@ -27,13 +27,13 @@ class AuthenticationDAO {
         }
     }
     
-    static func signin(email: String, password:String, complition: @escaping (Any?,Any?) -> Void){
+    static func signin(email: String, password:String, complition: @escaping (Any?, Any?) -> Void){
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             complition(user, error)
         }
     }
     
-    static func createUser(email: String, password: String, complition: @escaping (Any?,Error?) -> Void){
+    static func createUser(email: String, password: String, complition: @escaping (Any?, Error?) -> Void){
         Auth.auth().createUser(withEmail: email, password: password) { (user, err) in
             complition(user, err)
         }
